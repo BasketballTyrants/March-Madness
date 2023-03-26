@@ -61,16 +61,6 @@ east_region <- team_data %>%
   distinct()
 
 ```
-6. Power Ranking Metric
-- This data frame pulled team and kenpom adjusted efficiency from team_data to rank the teams 1 to 64
-```
-#This is our power ranking metric that arranges all 64 teams in the tournament 1 to 64 in terms of their Kenpom Adjusted Efficiency regardless of seed
- 
-ranking_metric <- team_data %>%
-  select(TEAM, KENPOM.ADJUSTED.EFFICIENCY) %>%
-  filter(TEAM %in% c("Alabama", "Arizona", "Baylor", "Virginia", "San Diego St.", "Creighton", "Missouri", "Maryland", "West Virginia", "Utah St.", "North Carolina St.", "College of Charleston", "Furman", "UC Santa Barbara", "Princeton", "Texas A&M Corpus Chris", "Houston", "Texas", "Xavier", "Indiana", "Miami FL", "Iowa St.", "Texas A&M", "Iowa", "Auburn", "Penn St.", "Pittsburgh", "Drake", "Kent St.", "Kennesaw St.", "Colgate", "Northern Kentucky", "Kansas", "UCLA", "Gonzaga", "Connecticut", "Saint Mary's", "TCU", "Northwestern", "Arkansas", "Illinois", "Boise St.", "Arizona St.", "VCU", "Iona", "Grand Canyon", "UNC Asheville", "Howard", "Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson")) %>%
-  distinct() %>%
-  arrange(desc(KENPOM.ADJUSTED.EFFICIENCY)) 
 ```
 
 <img width="1440" alt="Screen Shot 2023-03-25 at 9 22 06 PM" src="https://user-images.githubusercontent.com/118494123/227751818-bf78dfff-0fc5-4943-a9f6-c944a2a8d73a.png">
@@ -87,17 +77,27 @@ ranking_metric <- team_data %>%
 - This plot evaluates all teams on the same level, there is no weight assigned
 - To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
 
+2. ggplot: Bar Charts
 
+![image](https://user-images.githubusercontent.com/118494123/227810169-0c335e2c-9976-4b79-bb10-6982994405b6.png)
 
+- This is a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
 
-2. ggplot: bar charts
+3. Power Ranking Metric
 
-![image](https://user-images.githubusercontent.com/118494123/227757802-dd2d4b75-bc8b-4057-8b1c-2ae5d2ed49f2.png)
-- This is a bar chart of the East Region that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
+- This data frame pulled team and kenpom adjusted efficiency from team_data to rank the teams 1 to 64
+```
+#This is our power ranking metric that arranges all 64 teams in the tournament 1 to 64 in terms of their Kenpom Adjusted Efficiency regardless of seed
+ 
+ranking_metric <- team_data %>%
+  select(TEAM, KENPOM.ADJUSTED.EFFICIENCY) %>%
+  filter(TEAM %in% c("Alabama", "Arizona", "Baylor", "Virginia", "San Diego St.", "Creighton", "Missouri", "Maryland", "West Virginia", "Utah St.", "North Carolina St.", "College of Charleston", "Furman", "UC Santa Barbara", "Princeton", "Texas A&M Corpus Chris", "Houston", "Texas", "Xavier", "Indiana", "Miami FL", "Iowa St.", "Texas A&M", "Iowa", "Auburn", "Penn St.", "Pittsburgh", "Drake", "Kent St.", "Kennesaw St.", "Colgate", "Northern Kentucky", "Kansas", "UCLA", "Gonzaga", "Connecticut", "Saint Mary's", "TCU", "Northwestern", "Arkansas", "Illinois", "Boise St.", "Arizona St.", "VCU", "Iona", "Grand Canyon", "UNC Asheville", "Howard", "Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson")) %>%
+  distinct() %>%
+  arrange(desc(KENPOM.ADJUSTED.EFFICIENCY)) 
 
-3. Correlation Matrix
+3. Correlation Matrix: 
 
-4. Shinyapp
+5. Shinyapp
 
 5. Machine Learning Model
 
