@@ -78,6 +78,8 @@ east_region <- team_data %>%
 ## Data Summary
 
 ## Data Analysis
+![image](https://user-images.githubusercontent.com/118494123/227757907-364857d3-d08a-453c-932f-47ca490489fa.png)
+
 ![image](https://user-images.githubusercontent.com/118494123/227757802-dd2d4b75-bc8b-4057-8b1c-2ae5d2ed49f2.png)
 
 
