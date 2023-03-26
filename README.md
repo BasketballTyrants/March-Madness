@@ -86,6 +86,8 @@ ranking_metric <- team_data %>%
 - This plot evaluates all teams on the same level, there is no weight assigned
 - To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
 
+
+
 2. ggplot: bar charts
 
 ![image](https://user-images.githubusercontent.com/118494123/227757802-dd2d4b75-bc8b-4057-8b1c-2ae5d2ed49f2.png)
