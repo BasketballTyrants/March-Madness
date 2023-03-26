@@ -98,16 +98,12 @@ ranking_metric <- team_data %>%
   
   <img width="1440" alt="Screen Shot 2023-03-25 at 9 22 06 PM" src="https://user-images.githubusercontent.com/118494123/227751818-bf78dfff-0fc5-4943-a9f6-c944a2a8d73a.png">
 
-3. Correlation Matrix: 
+4. Correlation Matrix: 
 
 5. Shinyapp
-
-5. Machine Learning Model
 
 
 ## Conclusion
 
 Based on our model, we predict the winner of March Madness will be (blank)
-<img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
-
 
