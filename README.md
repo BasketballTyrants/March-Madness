@@ -86,7 +86,6 @@ ranking_metric <- team_data %>%
 - This plot evaluates all teams on the same level, there is no weight assigned
 - To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
 
-! [image] ()
 
 
 
