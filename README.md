@@ -79,7 +79,8 @@ east_region <- team_data %>%
 
 2. ggplot: Bar Charts
 
-![image](https://user-images.githubusercontent.com/118494123/227810169-0c335e2c-9976-4b79-bb10-6982994405b6.png)
+![image](https://user-images.githubusercontent.com/118494123/227810257-6a00d2f4-9a9d-4702-874c-72787bc29d05.png)
+
 
 - This is a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
 
