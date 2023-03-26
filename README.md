@@ -82,14 +82,20 @@ ranking_metric <- team_data %>%
 1. ggplot: scatterplots
 
 ![image](https://user-images.githubusercontent.com/118494123/227757907-364857d3-d08a-453c-932f-47ca490489fa.png)
+- This is a scatterplot for the East Region where the x variable is free throw percentage and the y variable is a team's turnover percentage
+- This plot evaluates all teams on the same level, there is no weight assigned
+- To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
 
 2. ggplot: bar charts
 
 ![image](https://user-images.githubusercontent.com/118494123/227757802-dd2d4b75-bc8b-4057-8b1c-2ae5d2ed49f2.png)
+- This is a bar chart of the East Region that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
 
 3. Correlation Matrix
 
-4. Machine Learning Model
+4. Shinyapp
+
+5. Machine Learning Model
 
 
 ## Conclusion
