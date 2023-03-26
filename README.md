@@ -86,7 +86,7 @@ east_region <- team_data %>%
 
 - This data frame pulled team and kenpom adjusted efficiency from team_data to rank the teams 1 to 64
 ```
-#This is our power ranking metric that arranges all 64 teams in the tournament 1 to 64 in terms of their Kenpom Adjusted Efficiency regardless of seed
+- This is our power ranking metric that arranges all 64 teams in the tournament 1 to 64 in terms of their Kenpom Adjusted Efficiency regardless of seed
  
 ranking_metric <- team_data %>%
   select(TEAM, KENPOM.ADJUSTED.EFFICIENCY) %>%
