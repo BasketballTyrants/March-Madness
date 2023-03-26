@@ -54,6 +54,8 @@ west_region <- team_data %>%
 
 5. East Region
 - Data frame the contains the team in the East Region and removes the duplicate values
+
+
 ```
 #Select teams for the East Region and eliminate duplicates for clean data
 east_region <- team_data %>%
@@ -61,7 +63,7 @@ east_region <- team_data %>%
   distinct()
 
 ```
-```
+
 
 <img width="1440" alt="Screen Shot 2023-03-25 at 9 22 06 PM" src="https://user-images.githubusercontent.com/118494123/227751818-bf78dfff-0fc5-4943-a9f6-c944a2a8d73a.png">
 
@@ -69,7 +71,7 @@ east_region <- team_data %>%
 
 ## Data Analysis
 
-1. ggplot: geom smooth 
+1. ggplot: geom smooth
 
 ![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
 
@@ -79,9 +81,7 @@ east_region <- team_data %>%
 
 2. ggplot: Bar Charts
 
-<img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810335-555a3e54-8d25-4a3d-8ee2-156ecb91d496.png">
-
-
+<img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
 
 - This is a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
 
@@ -107,3 +107,6 @@ ranking_metric <- team_data %>%
 ## Conclusion
 
 Based on our model, we predict the winner of March Madness will be (blank)
+<img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
+
+
