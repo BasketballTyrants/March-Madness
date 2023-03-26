@@ -80,9 +80,10 @@ ranking_metric <- team_data %>%
 ## Data Analysis
 
 1. ggplot: geom smooth 
+
 ![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
 
-- This is a scatterplot for the East Region where the x variable is free throw percentage and the y variable is a team's turnover percentage
+- This is a scatterplot for the Regions where the x variable is free throw percentage and the y variable is a team's turnover percentage
 - This plot evaluates all teams on the same level, there is no weight assigned
 - To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
 
