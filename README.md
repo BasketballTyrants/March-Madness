@@ -79,11 +79,19 @@ ranking_metric <- team_data %>%
 
 ## Data Analysis
 
-1. ggplots
+1. ggplot: scatterplots
 
 ![image](https://user-images.githubusercontent.com/118494123/227757907-364857d3-d08a-453c-932f-47ca490489fa.png)
 
+2. ggplot: bar charts
+
 ![image](https://user-images.githubusercontent.com/118494123/227757802-dd2d4b75-bc8b-4057-8b1c-2ae5d2ed49f2.png)
+
+3. Correlation Matrix
+
+4. Machine Learning Model
 
 
 ## Conclusion
+
+Based on our model, we predict the winner of March Madness will be (blank)
