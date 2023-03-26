@@ -32,8 +32,11 @@ ranking_metric <- team_data %>%
   select(TEAM, KENPOM.ADJUSTED.EFFICIENCY) %>%
   filter(TEAM %in% c("Alabama", "Arizona", "Baylor", "Virginia", "San Diego St.", "Creighton", "Missouri", "Maryland", "West Virginia", "Utah St.", "North Carolina St.", "College of Charleston", "Furman", "UC Santa Barbara", "Princeton", "Texas A&M Corpus Chris", "Houston", "Texas", "Xavier", "Indiana", "Miami FL", "Iowa St.", "Texas A&M", "Iowa", "Auburn", "Penn St.", "Pittsburgh", "Drake", "Kent St.", "Kennesaw St.", "Colgate", "Northern Kentucky", "Kansas", "UCLA", "Gonzaga", "Connecticut", "Saint Mary's", "TCU", "Northwestern", "Arkansas", "Illinois", "Boise St.", "Arizona St.", "VCU", "Iona", "Grand Canyon", "UNC Asheville", "Howard", "Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson")) %>%
   distinct() %>%
-  arrange(desc(KENPOM.ADJUSTED.EFFICIENCY))
+  arrange(desc(KENPOM.ADJUSTED.EFFICIENCY)) 
 ```
+
+![Power Metrics](https://user-images.githubusercontent.com/118494123/227751769-6a345d4f-9a5e-4efb-bc16-7a2126a206b8.png)
+
 
 3. South Region
 - Data frame the contains the team in the South Region and removes the duplicate values
