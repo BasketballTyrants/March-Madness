@@ -64,3 +64,9 @@ east_region <- team_data %>%
   filter(TEAM %in% c("Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson")) %>%
   distinct()
 ```
+
+## Data Summary
+
+## Data Analysis
+
+## Conclusion
