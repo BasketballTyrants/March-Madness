@@ -6,7 +6,13 @@ Zach, Blen, Dawit, Shaheer
 ## Introduction
 We will attempt to predict the winner of the NCAA Division 1 Men's Basketball Tournament more popularly known as March Madness.
 
-## Data Dictionary 
+## Data Dictionary
+The columns that we used were:
+1. SEED: The seed number of the team in their regional
+2. TEAM: The name of the team
+3. KENPOM.ADJUSTED.EFFICIENCY: The mean number of their offensive and defensive efficiency during the regular season
+4. FREE.THROW.PERCENTAGE: The team percentage of free throws made out of total free throw attempts during regular season
+5. TURNOVER.PERCENTAGE: The number of times a team is likely to turn the ball over per 100 possessions
 
 ## Data Cleaning
 1. Overall Data Frame
