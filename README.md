@@ -69,7 +69,9 @@ east_region <- team_data %>%
 
 ## Data Analysis
 
-## 1. ggplot: geom smooth
+## 1. Free Throw by Turn Over Rate
+
+ggplot: geom smooth
 
 
 - We did a geom smoooth visual for the Regions where the x variable is free throw percentage and the y variable is a team's turnover percentage
@@ -78,7 +80,9 @@ east_region <- team_data %>%
 
 ![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
 
-## 2. ggplot: Bar Charts
+## 2. KenPom Adjusted Efficiency 
+
+- ggplot: Bar Charts
 
 - Then we did a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
 
