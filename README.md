@@ -15,7 +15,7 @@ The columns that we used were:
 4. FREE.THROW.PERCENTAGE: The team percentage of free throws made out of total free throw attempts during regular season
 5. TURNOVER.PERCENTAGE: The number of times a team is likely to turn the ball over per 100 possessions
 
-## Data Cleaning
+## Data Cleaning🧹
 1. Overall Data Frame
 - team_data pulls the team, their seed, and the three variables we chose for analysis
 ```
