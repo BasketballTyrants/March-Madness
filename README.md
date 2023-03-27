@@ -100,7 +100,28 @@ ranking_metric <- team_data %>%
   
   <img width="1440" alt="Screen Shot 2023-03-25 at 9 22 06 PM" src="https://user-images.githubusercontent.com/118494123/227751818-bf78dfff-0fc5-4943-a9f6-c944a2a8d73a.png">
 
-4. Correlation Matrix: 
+4. Correlation Matrix:
+## Create a correlation matrix
+    team_corr <- cor(df[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
+
+# Convert to data frame and reshape
+`team_corr_df <- as.data.frame(team_corr)
+team_corr_df$Var1 <- rownames(team_corr_df)
+team_corr_melt <- reshape2::melt(team_corr_df, id.vars = "Var1")
+
+# Create heatmap using ggplot2
+ggplot(team_corr_melt, aes(x = Var1, y = variable, fill = value)) +
+  geom_tile() +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red",
+                       midpoint = 0, limit = c(-1,1), space = "Lab",
+                       name = "Pearson\nCorrelation") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 1,
+                                   size = 10, hjust = 1)) +
+  coord_fixed()
+`
+![image](https://user-images.githubusercontent.com/118494123/227817530-d091a18d-c1ee-4fd4-bc6d-efcbd3921fe6.png)
+
 
 5. Shinyapp
 
