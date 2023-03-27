@@ -1,12 +1,15 @@
 # March-Madness
+![image](https://user-images.githubusercontent.com/118494123/227814994-62bb4ae7-37a3-48d0-b576-beeb7f8282b5.png)
 
-## Contributors
+
+
+## Contributors👨‍👨‍👧‍👦
 Zach, Blen, Dawit, Shaheer
 
 ## Introduction
 We will attempt to predict the winner of the NCAA Division 1 Men's Basketball Tournament more popularly known as March Madness.
 
-## Data Dictionary
+## Data Dictionary📖
 The columns that we used were:
 1. SEED: The seed number of the team in their regional
 2. TEAM: The name of the team
