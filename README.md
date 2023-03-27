@@ -102,11 +102,8 @@ ranking_metric <- team_data %>%
 
 ## 4. Correlation Matrix:
 
- `team_corr <- cor(df[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
- `
-
- Convert to data frame and reshape
-`team_corr_df <- as.data.frame(team_corr)
+`team_corr <- cor(df[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
+team_corr_df <- as.data.frame(team_corr)
 team_corr_df$Var1 <- rownames(team_corr_df)
 team_corr_melt <- reshape2::melt(team_corr_df, id.vars = "Var1")
 
