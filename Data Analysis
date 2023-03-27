@@ -1,1 +1,35 @@
+Code for Kenpom Adjusted Efficiency for all teams
+
+```
+library(ggplot2)
+
+# Filter data for each region
+south_data <- team_data %>%
+  filter(TEAM %in% c("Alabama", "Arizona", "Baylor", "Virginia", "San Diego St.", "Creighton", "Missouri", "Maryland", "West Virginia", "Utah St.", "North Carolina St.", "College of Charleston", "Furman", "UC Santa Barbara", "Princeton", "Texas A&M Corpus Chris"))
+
+west_data <- team_data %>%
+  filter(TEAM %in% c("Kansas", "UCLA", "Gonzaga", "Connecticut", "Saint Mary's", "TCU", "Northwestern", "Arkansas", "Illinois", "Boise St.", "Arizona St.", "VCU", "Iona", "Grand Canyon", "UNC Asheville", "Howard"))
+
+midwest_data <- team_data %>%
+  filter(TEAM %in% c("Houston", "Texas", "Xavier", "Indiana", "Miami FL", "Iowa St.", "Texas A&M", "Iowa", "Auburn", "Penn St.", "Pittsburgh", "Drake", "Kent St.", "Kennesaw St.", "Colgate", "Northern Kentucky"))
+
+east_data <- team_data %>%
+  filter(TEAM %in% c("Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson"))
+
+# Combine data and create a Region column for facet wrapping
+team_data_combined <- rbind(south_data, west_data, midwest_data, east_data)
+team_data_combined$Region <- factor(rep(c("South", "West", "Midwest", "East"), c(nrow(south_data), nrow(west_data), nrow(midwest_data), nrow(east_data))))
+
+# Plot the data with faceting and tilted y-axis labels
+ggplot(team_data_combined, aes(x = TEAM, y = KENPOM.ADJUSTED.EFFICIENCY)) +
+  geom_bar(stat = "identity", fill = "#00AFBB") +
+  facet_wrap(~ Region, ncol = 2, scales = "free") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "KenPom Adjusted Efficiency by Team for All Regions",
+       x = "Team",
+       y = "KenPom Adjusted Efficiency")
+```
+
+
+
 
