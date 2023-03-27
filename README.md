@@ -1,7 +1,5 @@
 # March-Madness
-![image](https://user-images.githubusercontent.com/118494123/227814994-62bb4ae7-37a3-48d0-b576-beeb7f8282b5.png)
-
-
+![image](https://user-images.githubusercontent.com/118494123/227815119-ab045fa8-28dd-409b-a62b-dad2e5e651f2.png)
 
 ## Contributors👨‍👨‍👧‍👦
 Zach, Blen, Dawit, Shaheer
