@@ -69,7 +69,7 @@ east_region <- team_data %>%
 
 ## Data Analysis
 
-1. ggplot: geom smooth
+##1. ggplot: geom smooth
 
 
 - We did a geom smoooth visual for the Regions where the x variable is free throw percentage and the y variable is a team's turnover percentage
@@ -78,13 +78,13 @@ east_region <- team_data %>%
 
 ![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
 
-2. ggplot: Bar Charts
+##2. ggplot: Bar Charts
 
 - Then we did a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
 
 <img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
 
-3. Power Ranking Metric
+##3. Power Ranking Metric
 
 - This data frame pulled team and kenpom adjusted efficiency from team_data to rank the teams 1 to 64
 ```
@@ -100,7 +100,7 @@ ranking_metric <- team_data %>%
   
   <img width="1440" alt="Screen Shot 2023-03-25 at 9 22 06 PM" src="https://user-images.githubusercontent.com/118494123/227751818-bf78dfff-0fc5-4943-a9f6-c944a2a8d73a.png">
 
-#4. Correlation Matrix:
+##4. Correlation Matrix:
 
  `team_corr <- cor(df[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
  `
@@ -124,7 +124,7 @@ ggplot(team_corr_melt, aes(x = Var1, y = variable, fill = value)) +
 ![image](https://user-images.githubusercontent.com/118494123/227817530-d091a18d-c1ee-4fd4-bc6d-efcbd3921fe6.png)
 
 
-#5. Shinyapp
+##5. Shinyapp
 
 
 ## Conclusion
