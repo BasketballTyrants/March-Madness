@@ -1,4 +1,4 @@
-Code for Kenpom Adjusted Efficiency for all teams
+## Code for Kenpom Adjusted Efficiency for all teams
 
 ```
 library(ggplot2)
