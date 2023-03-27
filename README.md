@@ -102,7 +102,8 @@ ranking_metric <- team_data %>%
 
 ## 4. Correlation Matrix:
 
-`team_corr <- cor(df[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
+```
+team_corr <- cor(df[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
 team_corr_df <- as.data.frame(team_corr)
 team_corr_df$Var1 <- rownames(team_corr_df)
 team_corr_melt <- reshape2::melt(team_corr_df, id.vars = "Var1")
@@ -117,7 +118,10 @@ ggplot(team_corr_melt, aes(x = Var1, y = variable, fill = value)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 1,
                                    size = 10, hjust = 1)) +
   coord_fixed()
-`
+
+```
+
+
 ![image](https://user-images.githubusercontent.com/118494123/227817530-d091a18d-c1ee-4fd4-bc6d-efcbd3921fe6.png)
 
 
