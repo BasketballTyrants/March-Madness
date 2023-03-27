@@ -71,17 +71,18 @@ east_region <- team_data %>%
 
 1. ggplot: geom smooth
 
-![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
 
-- This is a scatterplot for the Regions where the x variable is free throw percentage and the y variable is a team's turnover percentage
+- We did a geom smoooth visual for the Regions where the x variable is free throw percentage and the y variable is a team's turnover percentage
 - This plot evaluates all teams on the same level, there is no weight assigned
 - To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
 
+![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
+
 2. ggplot: Bar Charts
 
-<img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
+- Then we did a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
 
-- This is a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
+<img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
 
 3. Power Ranking Metric
 
