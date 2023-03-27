@@ -130,5 +130,5 @@ ggplot(team_corr_melt, aes(x = Var1, y = variable, fill = value)) +
 
 ## Conclusion
 
-Based on our model, we predict the winner of March Madness will be (blank)
+Based on our model, we predict the winner of March Madness will be Alabama.
 
