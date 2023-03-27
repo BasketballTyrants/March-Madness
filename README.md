@@ -104,7 +104,7 @@ ranking_metric <- team_data %>%
   
   <img width="1440" alt="Screen Shot 2023-03-25 at 9 22 06 PM" src="https://user-images.githubusercontent.com/118494123/227751818-bf78dfff-0fc5-4943-a9f6-c944a2a8d73a.png">
 
-## 4. Correlation Matrix:
+## 4. Correlation Matrix
 
 ```
 team_corr <- cor(df[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
