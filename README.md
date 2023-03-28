@@ -90,6 +90,9 @@ ggplot: geom smooth
 - ggplot: Bar Charts
 
 - Then we did a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
+- The geom_bar() function is used to create the bar chart.
+- The data is filtered by region using the filter() function.
+- The data is combined and a new column "Region" is added for facet wrapping using the rbind() and factor() functions.
 
 
 <img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
