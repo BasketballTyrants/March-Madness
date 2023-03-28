@@ -64,9 +64,6 @@ east_region <- team_data %>%
   distinct()
 
 ```
-
-## Data Summary
-
 ## Data Analysis
 
 ## 1. Free Throw by Turn Over Rate
@@ -139,6 +136,8 @@ ggplot(team_corr_melt, aes(x = Var1, y = variable, fill = value)) +
 
 
 ## 5. Shinyapp
+
+![image](https://user-images.githubusercontent.com/118494123/228384063-80d3f4bb-a970-44b3-9e2e-776068805f34.png)
 
 
 ## Conclusion
