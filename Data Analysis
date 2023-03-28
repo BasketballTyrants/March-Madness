@@ -1,3 +1,25 @@
+## Code for the TurnOver by Free Throw Rate
+
+```
+ggplot(data = all_data, aes(x = FREE.THROW.., y = TURNOVER.., color = region)) +
+  geom_smooth(method = "auto", se = FALSE) +
+  geom_text(aes(label = TEAM), size = 3, nudge_x = 0.2, nudge_y = 0.2, check_overlap = TRUE) +
+  facet_wrap(~ region, ncol = 2) +
+  scale_color_manual(values = my_colors) +
+  labs(title = "Free Throw and Turnover Rates of Teams in Each Region", 
+       x = "Free Throw Percentage", y = "Turnover Percentage",
+       color = "Region") +
+  theme_bw() +
+  theme(plot.title = element_text(size = 14, face = "bold"),
+        legend.position = "bottom",
+        strip.text = element_text(size = 12),
+        axis.title = element_text(size = 12),
+        axis.text = element_text(size = 10),
+        plot.margin = unit(c(1, 1, 1.5, 1), "lines"),
+        panel.spacing.y = unit(0.5, "lines"),
+        panel.spacing.x = unit(0.5, "lines"))
+ ```
+
 ## Code for Kenpom Adjusted Efficiency for all teams
 
 ```
@@ -29,7 +51,24 @@ ggplot(team_data_combined, aes(x = TEAM, y = KENPOM.ADJUSTED.EFFICIENCY)) +
        x = "Team",
        y = "KenPom Adjusted Efficiency")
 ```
+## code For Power Ranking Metrics
+```
+library(ggplot2)
 
+# create win probability for each team based on kenpom adjusted efficiency and seed
+team_data <- df %>%
+  select(SEED, TEAM, KENPOM.ADJUSTED.EFFICIENCY) %>%
+  mutate(win_prob = (1/(1+exp(-0.13*(SEED-5)))) * (KENPOM.ADJUSTED.EFFICIENCY/100))
+
+# create stacked bar plot of win probability for each team
+ggplot(team_data, aes(x = TEAM, y = win_prob, fill = factor(SEED))) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = c("#1A1A1A", "#BEBEBE", "#C9B037", "#78A5A3", "#203731", "#0071C6", "#DD4814", "#E8D07A", "#B38867", "#00703C", "#A1A1A1", "#BF0A30", "#3C1053", "#CE1141", "#004071", "#000000"), labels = c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16")) +
+  ggtitle("Win Probability by Seed and Adjusted Efficiency") +
+  ylab("Win Probability") +
+  xlab("Team") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
 
 
