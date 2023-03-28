@@ -137,6 +137,8 @@ ggplot(team_corr_melt, aes(x = Var1, y = variable, fill = value)) +
 
 ## 5. Shinyapp
 
+- This Shiny app is showing a scatterplot and correlation matrix heatmap of the teams data based on the region selected in the sidebar. The scatter plot  displays the relationship between free throw percentage and turnover percentage, with a linear regression line overlaid. The correlation matrix heatmap shows the correlation coefficients between free throw percentage, turnover percentage, and KenPom adjusted efficiency to predict the winner. The data displayed in the app is filtered based on the region selected in the sidebar. 
+
 ![image](https://user-images.githubusercontent.com/118494123/228384063-80d3f4bb-a970-44b3-9e2e-776068805f34.png)
 
 
