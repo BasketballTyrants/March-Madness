@@ -1,1 +1,66 @@
+library(shiny)
+library(ggplot2)
+
+# Load data
+df <-read.csv("~/Documents/Data 331/Game Data 2023 .csv")
+
+# Define UI
+ui <- fluidPage(
+  titlePanel("College Basketball Data"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("region", "Select Region", 
+                  choices = c("South", "Midwest", "West", "East"))
+    ),
+    mainPanel(
+      plotOutput("scatterplot"),
+      plotOutput("corrplot")
+    )
+  )
+)
+
+# Define server
+server <- function(input, output) {
+  
+  # Create reactive subset of data based on region selection
+  region_data <- reactive({
+    switch(input$region,
+           "South" = df %>% 
+             filter(TEAM %in% c("Alabama", "Arizona", "Baylor", "Virginia", "San Diego St.", "Creighton", "Missouri", "Maryland", "West Virginia", "Utah St.", "North Carolina St.", "College of Charleston", "Furman", "UC Santa Barbara", "Princeton", "Texas A&M Corpus Chris")),
+           "Midwest" = df %>% 
+             filter(TEAM %in% c("Houston", "Texas", "Xavier", "Indiana", "Miami FL", "Iowa St.", "Texas A&M", "Iowa", "Auburn", "Penn St.", "Pittsburgh", "Drake", "Kent St.", "Kennesaw St.", "Colgate", "Northern Kentucky")),
+           "West" = df %>% 
+             filter(TEAM %in% c("Kansas", "UCLA", "Gonzaga", "Connecticut", "Saint Mary's", "TCU", "Northwestern", "Arkansas", "Illinois", "Boise St.", "Arizona St.", "VCU", "Iona", "Grand Canyon", "UNC Asheville", "Howard")),
+           "East" = df %>% 
+             filter(TEAM %in% c("Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson"))
+    )
+  })
+  
+  # Create correlation matrix heatmap
+  output$corrplot <- renderPlot({
+    corr_matrix <- cor(region_data()[,c("FREE.THROW..", "TURNOVER..", "KENPOM.ADJUSTED.EFFICIENCY")])
+    ggcorrplot(corr_matrix, 
+               type = "lower", 
+               outline.color = "white", 
+               colors = c("#6D9EC1", "white", "#E46726"),
+               lab = TRUE,
+               lab_size = 3,
+               title = "Correlation Matrix: Free Throw, Turnover, and KenPom Efficiency")  
+  })
+  
+  # Create scatterplot with linear regression line
+  output$scatterplot <- renderPlot({
+    ggplot(data = region_data(), aes(x = FREE.THROW.., y = TURNOVER..)) +
+      geom_point() +
+      geom_smooth(method = "lm", se = FALSE, color = "black") +
+      labs(title = "Free Throw and Turnover Rates",
+           x = "Free Throw Percentage", y = "Turnover Percentage") +
+      theme_bw()
+  })
+  
+}
+
+
+# Run app
+shinyApp(ui, server)
 
