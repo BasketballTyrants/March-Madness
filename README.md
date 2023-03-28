@@ -5,7 +5,7 @@
 Zach, Blen, Dawit, Shaheer
 
 ## Introduction
-We will attempt to predict the winner of the NCAA Division 1 Men's Basketball Tournament more popularly known as March Madness.
+We will attempt to predict the winner of the NCAA Division 1 Men's Basketball Tournament more popularly known as March Madness. We maily used the KenPom Adjusted Efficiency as our metric to determine the winner of the Tournament. KenPom's Adjusted Efficiency is a metric that measures a team's overall strength and efficiency, taking into account factors such as strength of schedule and margin of victory. The higher a team's KenPom Efficiency, the stronger they are considered to be. Here's how this metric can be used to predict the winner of a tournament:
 
 ## Data Dictionary📖
 The columns that we used were:
@@ -77,6 +77,11 @@ ggplot: geom smooth
 - We did a geom smoooth visual for the Regions where the x variable is free throw percentage and the y variable is a team's turnover percentage
 - This plot evaluates all teams on the same level, there is no weight assigned
 - To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
+- We used ggplot to create a scatter plot of free throw percentage vs. turnover percentage for all teams in the tournament, colored by region.
+- A linear regression line is added to the plot using the geom_smooth() function.
+- The team names are added to the plot using the geom_text() function.
+- The plot is faceted by region using the facet_wrap() function.
+- Finally, various formatting options are set using the scale_color_manual(), labs(), and theme() functions.
 
 ![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
 
@@ -85,6 +90,7 @@ ggplot: geom smooth
 - ggplot: Bar Charts
 
 - Then we did a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
+
 
 <img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
 
