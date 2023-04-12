@@ -77,12 +77,7 @@ We made a scatter plot with ggplot showing free throw percentage vs. turnover pe
 
 ## 2. KenPom Adjusted Efficiency 
 
-- ggplot: Bar Charts
-
-- Then we did a bar chart of the Regions that shows the team's Kenpom adjusted efficinecy compared to the rest of the region
-- The geom_bar() function is used to create the bar chart.
-- The data is filtered by region using the filter() function.
-- The data is combined and a new column "Region" is added for facet wrapping using the rbind() and factor() functions.
+The Kenpom adjusted efficiency visual helps us in predicting the winner of a game by providing an estimate of the win probability for each team based on their seed and Kenpom adjusted efficiency. The higher the win probability, the more likely a team is to win the game. This visualization is showing the win probability for each team based on their seed and KenPom adjusted efficiency rating. The stacked bar plot represents the win probability for each team, with each bar representing a different seed. The color of each segment within a bar represents the specific seed. The y-axis represents the win probability for each team, while the x-axis represents the team names. The graph title indicates that the win probability is based on both seed and adjusted efficiency. This visual provides a comparison of win probabilities among teams with different seeds and efficiency ratings. It can be used to identify teams with a higher likelihood of winning based on their seeding and adjusted efficiency rating.
 
 
 <img width="1440" alt="Screen Shot 2023-03-26 at 6 02 53 PM" src="https://user-images.githubusercontent.com/118494123/227810390-c45cfbf4-8126-40d1-a0ef-326778346ea4.png">
