@@ -16,54 +16,13 @@ The columns that we used were:
 5. TURNOVER.PERCENTAGE: The number of times a team is likely to turn the ball over per 100 possessions
 
 ## Data Cleaning🧹
-1. Overall Data Frame
-- team_data pulls the team, their seed, and the three variables we chose for analysis
-```
-team_data <- df %>%
-  select(SEED, TEAM, KENPOM.ADJUSTED.EFFICIENCY, FREE.THROW.., TURNOVER..) %>%
-  arrange(SEED, TEAM, KENPOM.ADJUSTED.EFFICIENCY, FREE.THROW.., TURNOVER..)
-```
+
+The initial dataset provided to us was a set of projections for the tournament, which included teams that did not make it to the actual tournament. To analyze the actual tournament results, we found a new dataset that included only the teams that were in the actual tournament and their actual seeds.
+Therefore, we obtained a new dataset that was cleaned down to the actual teams in the bracket and their actual seeds. From this new dataset, we created four separate data frames for each region (South, Midwest, West, and East) by selecting the teams that belonged to each region and eliminating any duplicate values.
+Each of these data frames contained the team's seed, name, and three variables that we chose for analysis: KenPom Adjusted Efficiency, Free Throw Percentage, and Turnover Percentage. These variables were selected because they are key metrics used in evaluating a team's performance in basketball. By cleaning and organizing the data in this way, we were able to focus our analysis on the actual teams that participated in the tournament and compare their performance based on these key metrics.
+By selecting only the relevant data, we were able to eliminate extraneous information and focus on the factors that we believe are most important in predicting a team's success in the tournament. This allows us to more accurately compare the performance of each team in these specific categories and make a more informed decision on which team is likely to come out on top based on their statistical performance in these key areas.
 
 
-
-2. South Region
-- Data frame the contains the team in the South Region and removes the duplicate values
-```
-#Select teams for the South Region and eliminate duplicates for clean data
-south_region <- team_data %>%
-  filter(TEAM %in% c("Alabama", "Arizona", "Baylor", "Virginia", "San Diego St.", "Creighton", "Missouri", "Maryland", "West Virginia", "Utah St.", "North Carolina St.", "College of Charleston", "Furman", "UC Santa Barbara", "Princeton", "Texas A&M Corpus Chris")) %>%
-  distinct()
-```
-
-3. Midwest Region
-- Data frame the contains the team in the Midwest Region and removes the duplicate values
-```
-#Select teams for the Midwest Region and eliminate duplicates for clean data
-midwest_region <- team_data %>%
-  filter(TEAM %in% c("Houston", "Texas", "Xavier", "Indiana", "Miami FL", "Iowa St.", "Texas A&M", "Iowa", "Auburn", "Penn St.", "Pittsburgh", "Drake", "Kent St.", "Kennesaw St.", "Colgate", "Northern Kentucky")) %>%
-  distinct()
-```
-
-4. West Region
-- Data frame the contains the team in the West Region and removes the duplicate values
-```
-#Select teams for the West Region and eliminate duplicates for clean data
-west_region <- team_data %>%
-  filter(TEAM %in% c("Kansas", "UCLA", "Gonzaga", "Connecticut", "Saint Mary's", "TCU", "Northwestern", "Arkansas", "Illinois", "Boise St.", "Arizona St.", "VCU", "Iona", "Grand Canyon", "UNC Asheville", "Howard")) %>%
-  distinct()
-```
-
-5. East Region
-- Data frame the contains the team in the East Region and removes the duplicate values
-
-
-```
-#Select teams for the East Region and eliminate duplicates for clean data
-east_region <- team_data %>%
-  filter(TEAM %in% c("Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson")) %>%
-  distinct()
-
-```
 ## Data Analysis
 
 ## 1. Free Throw by Turn Over Rate
