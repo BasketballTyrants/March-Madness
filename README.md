@@ -79,7 +79,9 @@ ggplot(team_corr_melt, aes(x = Var1, y = variable, fill = value)) +
   coord_fixed()
 
 ```
-
+We created a correlation matrix to see how strongly these variables are related to each other.
+To visualize the correlation matrix, we used the ggplot2 package and created a heatmap. We first converted the correlation matrix into a data frame, added the variable names as a new column, and then transformed the data from wide to long format. Next, we plotted the heatmap using ggplot2, where each tile represents the correlation coefficient between two variables. The colors in the heatmap indicate the strength and direction of the correlation: blue for negative, white for no correlation, and red for positive. We added a color legend and labeled it as "Pearson Correlation", and used a minimal theme for better readability. The heatmap shows the Pearson correlation coefficients between three variables: FREE.THROW, TURNOVER, and KENPOM.ADJUSTED.EFFICIENCY. Finally, we rotated the x-axis text by 90 degrees for better visualization and fixed the aspect ratio of the plot to make each tile square-shaped.
+This visualization allowed us to easily identify any patterns or trends in our data, and helped us to understand how strongly each variable is related to the others. Overall, this heatmap is a useful tool for visualizing the relationships between variables and identifying any patterns or trends in the data.
 
 ![image](https://user-images.githubusercontent.com/118494123/227817530-d091a18d-c1ee-4fd4-bc6d-efcbd3921fe6.png)
 
