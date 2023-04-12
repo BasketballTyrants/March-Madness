@@ -88,9 +88,11 @@ This visualization allowed us to easily identify any patterns or trends in our d
 
 ## 5. Shinyapp
 
-- This Shiny app is showing a scatterplot and correlation matrix heatmap of the teams data based on the region selected in the sidebar. The scatter plot  displays the relationship between free throw percentage and turnover percentage, with a linear regression line overlaid. The correlation matrix heatmap shows the correlation coefficients between free throw percentage, turnover percentage, and KenPom adjusted efficiency to predict the winner. The data displayed in the app is filtered based on the region selected in the sidebar. 
-
-![image](https://user-images.githubusercontent.com/118494123/228384063-80d3f4bb-a970-44b3-9e2e-776068805f34.png)
+We created a Shiny app that allows users to predict the winner of a college basketball game by inputting KenPom efficiency and free throw/turnover rates for the two teams playing.
+The app uses a logistic regression model to predict the probability of the first team winning based on the inputted data. The model was trained on the data analysis, where the outcome of each game was known, and the model learned the relationship between the input variables and the game outcome.
+Once the user inputs the data for the two teams, the model calculates the predicted probability of the first team winning and displays it in the app. The predicted winner is determined based on which team has the higher predicted probability of winning.
+The app also includes a plot of the predicted probabilities for both teams, allowing users to visually compare the two teams' chances of winning.
+Overall, this Shiny app provides a simple and user-friendly way for basketball enthusiasts to predict the winner of a game based on two key statistical indicators.
 
 
 ## Conclusion
