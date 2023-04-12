@@ -84,7 +84,7 @@ The Kenpom adjusted efficiency visual helps us in predicting the winner of a gam
 
 ## 3. Power Ranking Metric
 
-- This data frame pulled team and kenpom adjusted efficiency from team_data to rank the teams 1 to 64
+This data frame pulled team and kenpom adjusted efficiency from team_data to rank the teams 1 to 64
  ``` 
 ranking_metric <- team_data %>%
   select(TEAM, KENPOM.ADJUSTED.EFFICIENCY) %>%
