@@ -89,6 +89,8 @@ This visualization allowed us to easily identify any patterns or trends in our d
 ## 5. Shinyapp
 
 We created a Shiny app that allows users to predict the winner of a college basketball game by inputting KenPom efficiency and free throw/turnover rates for the two teams playing.
+The code is predicting the winner based on a simple scoring system that takes into account three factors for each team: their KenPom Adjusted Efficiency (a metric that measures a team's overall performance adjusted for strength of schedule), their free throw percentage, and their turnover percentage.
+The code loads a CSV file that contains data on each team's performance in these areas, and the user selects two teams to compare using dropdown menus in the app's sidebar. When the user clicks the "Predict Winner" button, the code calculates the total score for each team by adding up their scores based on the three factors, and then creates a bar plot that compares the two scores. The team with the higher score is predicted to be the winner.
 The app uses a logistic regression model to predict the probability of the first team winning based on the inputted data. The model was trained on the data analysis, where the outcome of each game was known, and the model learned the relationship between the input variables and the game outcome.
 Once the user inputs the data for the two teams, the model calculates the predicted probability of the first team winning and displays it in the app. The predicted winner is determined based on which team has the higher predicted probability of winning.
 The app also includes a plot of the predicted probabilities for both teams, allowing users to visually compare the two teams' chances of winning.
