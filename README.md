@@ -85,9 +85,7 @@ The Kenpom adjusted efficiency visual helps us in predicting the winner of a gam
 ## 3. Power Ranking Metric
 
 - This data frame pulled team and kenpom adjusted efficiency from team_data to rank the teams 1 to 64
-- This visualization is showing the win probability for each team based on their seed and KenPom adjusted efficiency rating. The stacked bar plot represents the win probability for each team, with each bar representing a different seed. The color of each segment within a bar represents the specific seed. The y-axis represents the win probability for each team, while the x-axis represents the team names. The graph title indicates that the win probability is based on both seed and adjusted efficiency. This visual provides a comparison of win probabilities among teams with different seeds and efficiency ratings. It can be used to identify teams with a higher likelihood of winning based on their seeding and adjusted efficiency rating.
-- This is our power ranking metric that arranges all 64 teams in the tournament 1 to 64 in terms of their Kenpom Adjusted Efficiency regardless of seed
-``` 
+ ``` 
 ranking_metric <- team_data %>%
   select(TEAM, KENPOM.ADJUSTED.EFFICIENCY) %>%
   filter(TEAM %in% c("Alabama", "Arizona", "Baylor", "Virginia", "San Diego St.", "Creighton", "Missouri", "Maryland", "West Virginia", "Utah St.", "North Carolina St.", "College of Charleston", "Furman", "UC Santa Barbara", "Princeton", "Texas A&M Corpus Chris", "Houston", "Texas", "Xavier", "Indiana", "Miami FL", "Iowa St.", "Texas A&M", "Iowa", "Auburn", "Penn St.", "Pittsburgh", "Drake", "Kent St.", "Kennesaw St.", "Colgate", "Northern Kentucky", "Kansas", "UCLA", "Gonzaga", "Connecticut", "Saint Mary's", "TCU", "Northwestern", "Arkansas", "Illinois", "Boise St.", "Arizona St.", "VCU", "Iona", "Grand Canyon", "UNC Asheville", "Howard", "Purdue", "Marquette", "Kansas St.", "Tennessee", "Duke", "Kentucky", "Michigan St.", "Memphis", "Florida Atlantic", "USC", "Providence", "Oral Roberts", "Louisiana Lafayette", "Montana St.", "Vermont", "Fairleigh Dickinson")) %>%
@@ -95,6 +93,9 @@ ranking_metric <- team_data %>%
   arrange(desc(KENPOM.ADJUSTED.EFFICIENCY)) 
   
 ```
+Our power ranking metric arranges all 64 teams in the tournament 1 to 64 in terms of their Kenpom Adjusted Efficiency regardless of seed.This visualization is showing the win probability for each team based on their seed and KenPom adjusted efficiency rating. The stacked bar plot represents the win probability for each team, with each bar representing a different seed. The color of each segment within a bar represents the specific seed. The y-axis represents the win probability for each team, while the x-axis represents the team names. The graph title indicates that the win probability is based on both seed and adjusted efficiency. This visual provides a comparison of win probabilities among teams with different seeds and efficiency ratings. It can be used to identify teams with a higher likelihood of winning based on their seeding and adjusted efficiency rating.
+
+
   
   <img width="1440" alt="Screen Shot 2023-03-25 at 9 22 06 PM" src="https://user-images.githubusercontent.com/118494123/227751818-bf78dfff-0fc5-4943-a9f6-c944a2a8d73a.png">
 
