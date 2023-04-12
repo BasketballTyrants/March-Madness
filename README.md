@@ -71,14 +71,7 @@ east_region <- team_data %>%
 ggplot: geom smooth
 
 
-- We did a geom smoooth visual for the Regions where the x variable is free throw percentage and the y variable is a team's turnover percentage
-- This plot evaluates all teams on the same level, there is no weight assigned
-- To properly read this visual, a team wants to be farthest to the right on the x variable and closer to the bottom on the y variable
-- We used ggplot to create a scatter plot of free throw percentage vs. turnover percentage for all teams in the tournament, colored by region.
-- A linear regression line is added to the plot using the geom_smooth() function.
-- The team names are added to the plot using the geom_text() function.
-- The plot is faceted by region using the facet_wrap() function.
-- Finally, various formatting options are set using the scale_color_manual(), labs(), and theme() functions.
+We made a scatter plot with ggplot showing free throw percentage vs. turnover percentage for all tournament teams, colored by region. The plot includes a linear regression line and team names. To read the plot, teams want to be farthest right on the x-axis and closer to the bottom on the y-axis. The plot is faceted by region and includes various formatting options.The visual is showing a scatter plot of the relationship between the rate of turnovers committed by a team and their success rate at free throws. Each point on the plot represents a different team. The X-axis shows the turnover rate (i.e., the percentage of possessions that result in a turnover) and the Y-axis shows the success rate at free throws (i.e., the percentage of free throws made out of all attempts). The scatter plot allows us to visually identify any patterns or trends in the data. If there is a strong relationship between turnovers and free throws, we would expect to see the points cluster in a particular pattern. For example, if teams that commit more turnovers tend to have a lower success rate at free throws, we would expect to see the points form a downward sloping line. Conversely, if there is no relationship between turnovers and free throws, we would expect to see the points scattered randomly across the plot. 
 
 ![image](https://user-images.githubusercontent.com/118494123/227807535-31a099e4-f373-429b-9fbc-5525de91b608.png)
 
